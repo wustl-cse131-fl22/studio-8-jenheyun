@@ -1,5 +1,7 @@
 package studio8;
 
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Objects;
 
 public class Time {
@@ -30,9 +32,22 @@ public boolean equals(Object obj) {
 	return hour == other.hour && min == other.min && sec == other.sec;
 }
 
-	public static void main(String[] args) {
- 
-    	
-    }
+public String toString() {
+	return hour + " " + min +" " + sec;
+}
+public static void main(String[] args) {
+	LinkedList<Date> list = new LinkedList<Date>();
+	Time t1 = new Time(1, 2, 1);
+	Time t2 = new Time(1, 2, 1);
+	list.add(t1);
+	list.add(t2);
+	list.add(t1);
+	System.out.println(list);
+	HashSet<Date> set = new HashSet<Date>();
+	set.add(t1);
+	set.add(t2);
+	set.add(t1);
+	System.out.println(set);
+}
 
 }
